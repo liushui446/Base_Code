@@ -1,0 +1,432 @@
+/*全局*/
+	QWidget#MainWindow {
+		/*qproperty-windowIcon: url("res/navigation/商标.png");
+		background: #E3E3E3;*/
+	}	
+	QLabel,
+	QLineEdit,
+	QRadioButton,
+	QComboBox,
+	QCheckBox,
+	QPushButton,
+	QToolButton,
+	QGroupBox,
+	QTableView,
+	QTableWidget,
+	QTextEdit,
+	QHeaderView::section/*表头样式*/
+	{
+		font-size:14px;
+		color: #30313b;
+	}
+	/*QCheckBox*/
+		QCheckBox::indicator {
+			width: 16px;
+			height: 16px;
+			border: 1px solid #DDDDDD;
+			border-radius: 2px;
+		}
+		QCheckBox::indicator:unchecked {
+			image: url("");
+			background: #FFFFFF;
+		}
+		QCheckBox::indicator:checked {
+			image: url("res/general/QCheckBox_checked.png");
+			background: #1677FF;
+		}
+		QCheckBox::indicator:indeterminate  {
+			image: url("res/general/QCheckBox_partiallychecked.png");
+		}
+		QCheckBox::indicator:checked:disabled {
+			image: url("res/general/QCheckBox_checked_disabled.png");
+		}
+		QCheckBox:unchecked {
+			color: #333333;
+		}
+		QCheckBox:checked {
+			color: #333333;
+		}
+		QCheckBox:disabled {
+			color: #d2d2df;
+		}
+	/*QComboBox*/
+		QComboBox {
+			background: #F5F5F5;
+			border: 1px solid #C5C5C5;
+			border-radius: 1px;
+		}
+		QComboBox:disabled{
+			color: #CBCBCB;
+			border: 1px solid #CBCBCB;
+		}
+		QComboBox::down-arrow {
+			image: url("res/general/QComboBox_down-arrow.png");
+		}
+		QComboBox::drop-down {
+			width: 32px;
+			border: 0px solid #C5C5C5;
+		}
+	/*QDialog*/
+		QDialog {
+			background: #E3E3E3;
+		}
+	/*QLabel*/
+		QLabel[frameShadow="48"] {
+			background: #F0F0F0;
+			border: 2px solid #D6D6D6;
+		}
+	/*QLineEdit*/
+		QLineEdit {
+			background: #F5F5F5;
+			border: 1px solid #C5C5C5;
+			border-radius: 1px;
+		}
+		QLineEdit:disabled{
+			color: #CBCBCB;
+			border: 1px solid #CBCBCB;
+		}
+	/*QPushButton
+		QPushButton {
+			border: 2px solid #CBCBCB;
+			background: qlineargradient(
+				spread: pad,
+				x1: 0, y1: 0,
+				x2: 0, y2: 1,
+				stop: 0.00 #F3F3F3,
+				stop: 0.47 #F2F2F2,
+				stop: 1.00 #D3D3D3
+			);
+			font-size: 14px;
+			color: #333333;
+		}
+		QPushButton:disabled {
+			background-color: rgba(242, 242, 242, 70%);
+			color: #CBCBCB;
+			border: 1px solid #CBCBCB;
+		}
+		QPushButton:hover
+		{
+			background: qlineargradient(
+				spread: pad,
+				x1: 0, y1: 0,
+				x2: 0, y2: 1,
+				stop: 0.00 #FFFFFF,
+				stop: 0.47 #FFFFFF,
+				stop: 1.00 #E8E8E8
+			);
+		}
+		QPushButton:pressed
+		{
+			color:black;
+			background-color:rgb(234, 234, 234);
+			border: 2px solid #CBCBCB;
+			padding-left:1px;
+			padding-top:1px;
+		}*/
+	/*QToolButton
+		QToolButton {
+			border: 2px solid #CBCBCB;
+			background: qlineargradient(
+				spread: pad,
+				x1: 0, y1: 0,
+				x2: 0, y2: 1,
+				stop: 0.00 #F3F3F3,
+				stop: 0.47 #F2F2F2,
+				stop: 1.00 #D3D3D3
+			);
+			font-size: 14px;
+			color: #333333;
+		}
+		QToolButton:disabled {
+			background-color: rgba(242, 242, 242, 70%);
+			color: #CBCBCB;
+			border: 1px solid #CBCBCB;
+		}
+		QToolButton:hover
+		{
+			background: qlineargradient(
+				spread: pad,
+				x1: 0, y1: 0,
+				x2: 0, y2: 1,
+				stop: 0.00 #FFFFFF,
+				stop: 0.47 #FFFFFF,
+				stop: 1.00 #E8E8E8
+			);
+		}*/
+	/*QRadioButton*/
+		QRadioButton::indicator {
+			width: 16px;
+			height: 16px;
+		}
+		QRadioButton::indicator::checked {
+			image: url("res/general/QRadioButton_checked.png");
+		}
+		QRadioButton::indicator::checked:disabled {
+			image: url("res/general/QRadioButton_checked_disabled.png");
+		}
+		QRadioButton::indicator::unchecked {
+			image: url("res/general/QRadioButton_unchecked.png");
+		}
+	/*标签页(QTabWidget QTabBar)*/
+		QTabWidget::pane {
+			background: #E3E3E3;
+			border-radius: 2px;
+			border: 1px solid #A4A4A4;
+			border-top: 2px solid #C2C7CB;
+			position: absolute;
+			top: 0px;
+		}
+		QTabWidget::tab-bar {
+			alignment: left;
+		}
+		QTabBar::tab {
+			border: 1px solid #CBCBCB;
+			min-width: 80px;
+			height: 20px;
+			background: qlineargradient(
+				spread: pad,
+				x1: 0, y1: 0,
+				x2: 0, y2: 1,
+				stop: 0.00 rgba(243, 243, 243, 1),
+				stop: 0.47 rgba(242, 242, 242, 1),
+				stop: 1.00 rgba(211, 211, 211, 1)
+			);
+		}
+		QTabBar::tab:selected {
+			color: #FFFFFF;
+			font-weight: 600;
+			background: qlineargradient(
+				spread: pad,
+				x1: 0, y1: 0,
+				x2: 1, y2: 1,
+				stop: 0.00 rgba(44, 154, 255, 1),
+				stop: 1.00 rgba(67, 109, 253, 1)
+			);
+		}
+	/*QTableView*/
+		QTableView {
+			background: #F5F5F5;
+			color: #333333;
+			selection-background-color: #d3d3d3;
+			selection-color: #333333;
+			gridline-color: #CCCCCC;
+		}
+		QTableView QTableCornerButton::section {
+			background: #9FA0A8;
+			border: 1px outset white;
+		}
+		QHeaderView::section {
+			background: #9FA0A8;
+			border: 1px outset white;
+			color: #FFFFFF;
+		}
+/*主界面*/
+/*搜索*/
+	MainWindow QPushButton#pushButton_Search
+	{
+		qproperty-text: "";
+		qproperty-iconSize: 12px 12px;
+		qproperty-icon: url("res/button/zoom.svg");
+	}
+/*选择*/
+	MainWindow QPushButton#pushButton_Mouse
+	{
+		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/mouse.svg");
+	}
+/*拖动*/
+	MainWindow QPushButton#pushButton_Graspmovepicture
+	{
+		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/pan_tool.svg");
+	}
+/*移动*/
+	MainWindow QPushButton#pushButton_move
+	{
+		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/games.svg");
+	}
+/*画框*/
+	MainWindow QPushButton#pushButton_Draw
+	{
+		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/crop_landscape.svg");
+	}
+/*轮廓线*/
+	MainWindow QPushButton#pushButton_Outline
+	{
+		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/view.svg");
+	}
+/*十字线*/
+	MainWindow QPushButton#pushButton_Cross
+	{
+		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/2288800-200.png");
+	}
+/*Fov*/
+	MainWindow QPushButton#pushButton_fov
+	{
+		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/statistics.svg");
+	}
+/*Refresh*/
+	MainWindow QPushButton#pushButton_Refresh
+	{
+		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/cycle.svg");
+	}
+/*缩略图*/
+	MainWindow QPushButton#pushButton_Thumbnail
+	{
+		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/perm_media.svg");
+	}
+/*底部导航*/
+/*导入Gerber*/
+	MainWindow QPushButton#pushButton_ImportGerber_down
+	{
+		text-align : left;
+		qproperty-iconSize: 16px 16px;
+		qproperty-icon: url("res/button/Navigation/TempcircleRed.png");
+	}
+/*导入Cad*/
+	MainWindow QPushButton#pushButton_ImportCad_down
+	{
+		text-align : left;
+		qproperty-iconSize: 16px 16px;
+		qproperty-icon: url("res/button/Navigation/TempcircleRed.png");
+	}
+/*提取焊盘*/
+	MainWindow QPushButton#pushButton_WithdrawPad_down
+	{
+		text-align : left;
+		qproperty-iconSize: 16px 16px;
+		qproperty-icon: url("res/button/Navigation/TempcircleRed.png");
+	}
+/*X/Y坐标偏移*/
+	MainWindow QPushButton#pushButton_CoorOffset_down
+	{
+		text-align : left;
+		qproperty-iconSize: 16px 16px;
+		qproperty-icon: url("res/button/Navigation/TempcircleRed.png");
+	}
+/*元件匹配*/
+	MainWindow QPushButton#pushButton_PartMatching_down
+	{
+		text-align : left;
+		qproperty-iconSize: 16px 16px;
+		qproperty-icon: url("res/button/Navigation/TempcircleRed.png");
+	}
+/*自动拼板*/
+	MainWindow QPushButton#pushButton_AutoJoint_down
+	{
+		text-align : left;
+		qproperty-iconSize: 16px 16px;
+		qproperty-icon: url("res/button/Navigation/TempcircleRed.png");
+	}
+/*焊盘分组*/
+	MainWindow QPushButton#pushButton_PadGroup_down
+	{
+		text-align : left;
+		qproperty-iconSize:16px 16px;
+		qproperty-icon: url("res/button/Navigation/TempcircleRed.png");
+	}
+/*优化*/
+	MainWindow QPushButton#pushButton_RouteMake_down
+	{
+		text-align : left;
+		qproperty-iconSize: 16px 16px;
+		qproperty-icon: url("res/button/Navigation/TempcircleRed.png");
+	}
+/*生产测试*/
+	MainWindow QPushButton#pushButton_Production_down
+	{
+		text-align : left;
+		qproperty-iconSize: 16px 16px;
+		qproperty-icon: url("res/button/Navigation/Tempsupervised_user_circle_Green_Red.png");
+	}
+/*注册全部*/
+	MainWindow QPushButton#pushButton_RegisterALL
+	{
+        		qproperty-text: "";
+		qproperty-iconSize: 20px 20px;
+		qproperty-icon: url("res/button/done_all.png");
+	}
+/*测试全部*/
+	MainWindow QPushButton#pushButton_testall
+	{
+        		qproperty-text: "";
+		qproperty-iconSize: 20px 20px;
+		qproperty-icon: url("res/button/Templocal_fire_department.png");
+	}
+/*顶部导航栏*/
+/*拍照保存*/
+	MainWindow QPushButton#pushButton_camera
+	{
+        		qproperty-text: "";
+		qproperty-iconSize: 30px 30px;
+		qproperty-icon: url("res/button/camera.png");
+	}
+/*旋转*/
+	MainWindow QPushButton#pushButton_Rotation
+	{
+        		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/Tempcrop_rotate.png");
+	}
+/*删除*/
+	MainWindow QPushButton#pushButton_DeletePad
+	{
+        		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/trash-can.svg");
+	}
+/*匹配*/
+	MainWindow QPushButton#pushButton_Match
+	{
+        		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/Pushbtn_Match.svg");
+	}
+/*全局Mark选择*/
+	MainWindow QPushButton#pushButton_Mark_global
+	{
+        		qproperty-text: "";
+		qproperty-iconSize: 32px 32px;
+		qproperty-icon: url("res/button/pushbtn_needle_green.svg");
+	}
+/*分组界面*/
+	MainWindow QToolButton#toolButton_Group_delete
+	, MainWindow QToolButton#toolButton_Group_search
+	, MainWindow QToolButton#toolButton_Group_add
+	{
+		border-style: hidden;
+		color: rgba(255, 255, 255, 0.6);
+		qproperty-text: "";
+		qproperty-iconSize: 24px 24px;
+	}
+/*增加分组*/
+	MainWindow QToolButton#toolButton_Group_add
+	{
+		qproperty-icon: url("res/general/pushbtn_files_add.svg");
+	}
+/*删除分组*/
+	MainWindow QToolButton#toolButton_Group_delete
+	{
+		qproperty-icon: url("res/general/Pushbtn_delete.svg");
+	}
+/*查询分组*/
+	MainWindow QToolButton#toolButton_Group_search
+	{
+		qproperty-icon: url("res/general/Pushbtn_search.png");
+	}

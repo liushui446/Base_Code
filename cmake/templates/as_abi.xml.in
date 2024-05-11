@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+    This file is auto-generated
+
+-->
+
+<descriptor>
+
+<version>
+    @AS_ABI_VERSION@
+</version>
+
+<headers>
+    @AS_ABI_HEADERS@
+</headers>
+
+<libs>
+    @AS_ABI_LIBRARIES@
+</libs>
+
+<skip_headers>
+    asarts m/core/hal/intrin*
+    as/core/hal/*macros.*
+    as/core/hal/*.impl.*
+    as/core/cuda*
+    as/core/opencl*
+    as/core/parallel/backend/*
+    as/core/private*
+    as/core/*quaternion*
+    as/cxeigen.hpp
+    as/core/eigen.hpp
+    as/flann/hdf5.h
+    as/imgcodecs/imgcodecs_c.h
+    as/imgcodecs/ios.h
+    as/imgcodecs/macosx.h
+    as/videoio/videoio_c.h
+    as/videoio/cap_ios.h
+    as/xobjdetect/private.hpp
+    @AS_ABI_SKIP_HEADERS@
+</skip_headers>
+
+<skip_libs>
+    @AS_ABI_SKIP_LIBRARIES@
+</skip_libs>
+
+<gcc_options>
+ -std=c++11
+ @AS_ABI_GCC_OPTIONS@
+</gcc_options>
+
+</descriptor>

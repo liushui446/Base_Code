@@ -1,0 +1,8 @@
+# ignore dot files/directories
+!.gitignore
+.git
+.vscode
+build
+asdata
+aslog
+asimg

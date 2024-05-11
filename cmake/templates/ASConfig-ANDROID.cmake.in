@@ -1,0 +1,13 @@
+# Android API level from which AS has been compiled is remembered
+set(AS_ANDROID_NATIVE_API_LEVEL "@AS_ANDROID_NATIVE_API_LEVEL_CONFIGCMAKE@")
+
+# ==============================================================
+#  Check AS availability
+# ==============================================================
+if(AS_ANDROID_NATIVE_API_LEVEL GREATER ANDROID_NATIVE_API_LEVEL)
+  if(NOT AS_FIND_QUIETLY)
+    message(WARNING "Minimum required by AS API level is android-${AS_ANDROID_NATIVE_API_LEVEL}")
+  endif()
+  set(AS_FOUND 0)
+  return()
+endif()

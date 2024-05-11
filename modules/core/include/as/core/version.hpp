@@ -1,0 +1,22 @@
+#ifndef as_VERSION_HPP
+#define as_VERSION_HPP
+
+#define AS_VERSION_MAJOR    0
+#define AS_VERSION_MINOR    0
+#define AS_VERSION_REVISION 1
+#define AS_VERSION_STATUS   "-rc"
+
+#define ASAUX_STR_EXP(__A)  #__A
+#define ASAUX_STR(__A)      ASAUX_STR_EXP(__A)
+
+#define ASAUX_STRW_EXP(__A)  L ## #__A
+#define ASAUX_STRW(__A)      ASAUX_STRW_EXP(__A)
+
+#define AS_VERSION          ASAUX_STR(AS_VERSION_MAJOR) "." ASAUX_STR(AS_VERSION_MINOR) "." ASAUX_STR(AS_VERSION_REVISION) AS_VERSION_STATUS
+
+/* old  style version constants*/
+#define AS_MAJOR_VERSION    AS_VERSION_MAJOR
+#define AS_MINOR_VERSION    AS_VERSION_MINOR
+#define AS_SUBMINOR_VERSION AS_VERSION_REVISION
+
+#endif // as_VERSION_HPP

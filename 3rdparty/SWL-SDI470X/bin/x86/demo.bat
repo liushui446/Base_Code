@@ -1,0 +1,55 @@
+@echo off
+dlpc-swl-shell getEvminfo
+dlpc-swl-shell getLedinfo
+
+dlpc-swl-shell getTriggerin
+dlpc-swl-shell setTriggerin 0 1
+
+dlpc-swl-shell getPatternready
+dlpc-swl-shell setPatternready 1 1
+
+
+dlpc-swl-shell setTriggerout 0 1 0 10
+dlpc-swl-shell getTriggerout 0
+
+dlpc-swl-shell setTriggerout 1 1 0 -20
+dlpc-swl-shell getTriggerout 1
+
+dlpc-swl-shell getMode
+dlpc-swl-shell setMode 4
+
+echo play config1
+dlpc-swl-shell load 1,2,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 1,2,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500 2,1,2500,7000,1500
+dlpc-swl-shell runcont
+pause
+
+echo play config2
+dlpc-swl-shell runstop
+dlpc-swl-shell load 0,7,2500,7000,1500
+dlpc-swl-shell runcont
+pause
+
+echo play config3
+dlpc-swl-shell runstop
+dlpc-swl-shell load 4,2,2500,7000,1500 4,2,2500,7000,1500 4,2,2500,7000,1500 4,2,2500,7000,1500 4,2,2500,7000,1500 4,2,2500,7000,1500 4,2,2500,7000,1500 4,2,2500,7000,1500 4,2,2500,7000,1500 4,2,2500,7000,1500
+dlpc-swl-shell runcont
+pause
+
+
+echo play default
+dlpc-swl-shell runstop
+dlpc-swl-shell reload
+dlpc-swl-shell runcont
+
+pause
+dlpc-swl-shell runstop
+
+
+echo 切换到下一台光机,按0,1,2,3...顺序
+set SWL_USB_IDX=1
+dlpc-swl-shell runonce
+
+echo 切换到第一台光机,按0,1,2,3...顺序
+set SWL_USB_IDX=0
+dlpc-swl-shell runonce
+

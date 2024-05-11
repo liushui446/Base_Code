@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: AS
+Description: Open Source Computer Vision Library
+Version: @AS_VERSION_PLAIN@
+Libs: @AS_PC_LIBS@
+Libs.private: @AS_PC_LIBS_PRIVATE@
+Cflags: -I${includedir}

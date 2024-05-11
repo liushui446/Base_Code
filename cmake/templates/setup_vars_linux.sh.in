@@ -1,0 +1,20 @@
+#!/bin/bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
+[[ ! "${AS_QUIET}" ]] && ( echo "Setting vars for AS @AS_VERSION@" )
+export LD_LIBRARY_PATH="$SCRIPT_DIR/@AS_LIB_RUNTIME_DIR_RELATIVE_CMAKECONFIG@:$LD_LIBRARY_PATH"
+
+if [[ ! "$AS_SKIP_PYTHON" ]]; then
+  PYTHONPATH_AS="$SCRIPT_DIR/@AS_PYTHON_DIR_RELATIVE_CMAKECONFIG@"
+  [[ ! "${AS_QUIET}" ]] && ( echo "Append PYTHONPATH: ${PYTHONPATH_AS}" )
+  export PYTHONPATH="${PYTHONPATH_AS}:$PYTHONPATH"
+fi
+
+# Don't exec in "sourced" mode
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+  if [[ $# -ne 0 ]]; then
+    [[ ! "${AS_QUIET}" && "${AS_VERBOSE}" ]] && ( echo "Executing: $*" )
+    exec "$@"
+  fi
+fi

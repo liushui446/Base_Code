@@ -1,0 +1,5 @@
+// AS CPU baseline features
+@AS_CPU_BASELINE_DEFINITIONS_CONFIGMAKE@
+
+// AS supported CPU dispatched features
+@AS_CPU_DISPATCH_DEFINITIONS_CONFIGMAKE@
